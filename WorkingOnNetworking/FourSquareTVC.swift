@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 
 class FourSquareTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var mapView: MKMapView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

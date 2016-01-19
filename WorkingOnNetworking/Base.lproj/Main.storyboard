@@ -21,6 +21,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ObV-IW-myW">
                                 <rect key="frame" x="-11" y="256" width="611" height="295"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FourSquareCell" id="PSY-gh-hgl">
+                                        <rect key="frame" x="0.0" y="28" width="611" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PSY-gh-hgl" id="Vuj-PH-YUJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="611" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="vnL-5h-EiX" id="Vxk-9t-qQ6"/>
                                     <outlet property="delegate" destination="vnL-5h-EiX" id="Xt1-9e-4uO"/>
@@ -32,17 +42,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ITw-8a-z5E" firstAttribute="top" secondItem="OPe-6i-U3L" secondAttribute="top" id="9AR-ju-wUZ"/>
-                            <constraint firstItem="ObV-IW-myW" firstAttribute="leading" secondItem="OPe-6i-U3L" secondAttribute="leadingMargin" constant="-31" id="CSv-fg-us2"/>
-                            <constraint firstItem="Fnv-ax-rxG" firstAttribute="top" secondItem="ITw-8a-z5E" secondAttribute="bottom" constant="291" id="Rta-yY-U2p"/>
-                            <constraint firstItem="ObV-IW-myW" firstAttribute="top" secondItem="DCr-pb-Oy2" secondAttribute="bottom" constant="236" id="Tx8-Wa-4AW"/>
-                            <constraint firstItem="ObV-IW-myW" firstAttribute="trailing" secondItem="ITw-8a-z5E" secondAttribute="trailing" id="Vvi-4t-Wh6"/>
-                            <constraint firstItem="ObV-IW-myW" firstAttribute="bottom" secondItem="Fnv-ax-rxG" secondAttribute="top" id="Yto-im-ILK"/>
-                            <constraint firstAttribute="trailing" secondItem="ObV-IW-myW" secondAttribute="trailing" id="qD0-19-RZj"/>
-                            <constraint firstItem="ITw-8a-z5E" firstAttribute="leading" secondItem="OPe-6i-U3L" secondAttribute="leading" id="vnT-4e-TrW"/>
+                            <constraint firstItem="ObV-IW-myW" firstAttribute="top" secondItem="ITw-8a-z5E" secondAttribute="bottom" constant="-4" id="26J-Pl-F7x"/>
+                            <constraint firstItem="ObV-IW-myW" firstAttribute="trailing" secondItem="ITw-8a-z5E" secondAttribute="trailing" id="Urt-01-fFd"/>
+                            <constraint firstItem="ITw-8a-z5E" firstAttribute="leading" secondItem="OPe-6i-U3L" secondAttribute="leading" id="WjM-TL-gTh"/>
+                            <constraint firstAttribute="trailing" secondItem="ObV-IW-myW" secondAttribute="trailing" id="Z6J-u1-wPn"/>
+                            <constraint firstItem="ObV-IW-myW" firstAttribute="bottom" secondItem="Fnv-ax-rxG" secondAttribute="top" id="ZY9-qT-8TU"/>
+                            <constraint firstItem="ITw-8a-z5E" firstAttribute="top" secondItem="OPe-6i-U3L" secondAttribute="top" id="ffl-xt-rW0"/>
+                            <constraint firstItem="ObV-IW-myW" firstAttribute="top" secondItem="DCr-pb-Oy2" secondAttribute="bottom" constant="236" id="ibi-x8-30W"/>
+                            <constraint firstItem="ObV-IW-myW" firstAttribute="leading" secondItem="OPe-6i-U3L" secondAttribute="leadingMargin" constant="-31" id="lhi-e6-iaF"/>
+                            <constraint firstItem="Fnv-ax-rxG" firstAttribute="top" secondItem="ITw-8a-z5E" secondAttribute="bottom" constant="291" id="vbB-nb-RE0"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="mYl-yM-0Fv"/>
+                    <connections>
+                        <outlet property="mapView" destination="ITw-8a-z5E" id="ayA-eM-cnU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfz-ZK-FK9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
