@@ -1,16 +1,28 @@
 PODS:
   - Alamofire (3.1.5)
+  - Fabric (1.6.3)
+  - Mapbox-iOS-SDK (3.0.1)
+  - QuadratTouch (1.1.1)
   - Realm (0.97.0):
     - Realm/Headers (= 0.97.0)
   - Realm/Headers (0.97.0)
   - RealmSwift (0.97.0):
     - Realm (= 0.97.0)
   - SwiftyJSON (2.3.2)
+  - TwitterCore (1.15.1):
+    - Fabric
+  - TwitterKit (1.15.1):
+    - TwitterCore (= 1.15.1)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
+  - Fabric
+  - Mapbox-iOS-SDK
+  - QuadratTouch (>= 1.0)
   - RealmSwift
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - TwitterCore
+  - TwitterKit
 
 EXTERNAL SOURCES:
   SwiftyJSON:
@@ -23,8 +35,13 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
+  Fabric: cbe0ca6c9531bba17910052f6f105fcbc5fa7f67
+  Mapbox-iOS-SDK: 61e79f3dd8432617bd1a66b2d7273ab5ce923ca9
+  QuadratTouch: 296d83c63a4328f6f40af9fc728fe24f0e3b00d4
   Realm: b498a6fb9d288b171ff98d0e2d4384c295be8990
   RealmSwift: d014810dec75c9a3f1a33926d2dabfed855c582c
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  TwitterCore: 12983a7464e34afbbf18881347898a9db526ac71
+  TwitterKit: b5821570887ec2d77650fa232eaec175665dc443
 
 COCOAPODS: 0.39.0
