@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Item 2-->
         <scene sceneID="sbh-6X-edk">
             <objects>
-                <viewController id="vnL-5h-EiX" sceneMemberID="viewController">
+                <viewController id="vnL-5h-EiX" customClass="FourSquareTVC" customModule="WorkingOnNetworking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DCr-pb-Oy2"/>
                         <viewControllerLayoutGuide type="bottom" id="Fnv-ax-rxG"/>
@@ -18,16 +19,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ObV-IW-myW">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="-11" y="256" width="611" height="295"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vnL-5h-EiX" id="Vxk-9t-qQ6"/>
+                                    <outlet property="delegate" destination="vnL-5h-EiX" id="Xt1-9e-4uO"/>
+                                </connections>
                             </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ITw-8a-z5E">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="260"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ObV-IW-myW" firstAttribute="bottom" secondItem="Fnv-ax-rxG" secondAttribute="top" id="4Wj-Eh-Fho"/>
-                            <constraint firstAttribute="trailing" secondItem="ObV-IW-myW" secondAttribute="trailing" id="AvK-zp-5yg"/>
-                            <constraint firstItem="ObV-IW-myW" firstAttribute="leading" secondItem="OPe-6i-U3L" secondAttribute="leading" id="JTu-09-Ffy"/>
-                            <constraint firstItem="ObV-IW-myW" firstAttribute="top" secondItem="OPe-6i-U3L" secondAttribute="top" id="oQm-kO-rFn"/>
+                            <constraint firstItem="ITw-8a-z5E" firstAttribute="top" secondItem="OPe-6i-U3L" secondAttribute="top" id="9AR-ju-wUZ"/>
+                            <constraint firstItem="ObV-IW-myW" firstAttribute="leading" secondItem="OPe-6i-U3L" secondAttribute="leadingMargin" constant="-31" id="CSv-fg-us2"/>
+                            <constraint firstItem="Fnv-ax-rxG" firstAttribute="top" secondItem="ITw-8a-z5E" secondAttribute="bottom" constant="291" id="Rta-yY-U2p"/>
+                            <constraint firstItem="ObV-IW-myW" firstAttribute="top" secondItem="DCr-pb-Oy2" secondAttribute="bottom" constant="236" id="Tx8-Wa-4AW"/>
+                            <constraint firstItem="ObV-IW-myW" firstAttribute="trailing" secondItem="ITw-8a-z5E" secondAttribute="trailing" id="Vvi-4t-Wh6"/>
+                            <constraint firstItem="ObV-IW-myW" firstAttribute="bottom" secondItem="Fnv-ax-rxG" secondAttribute="top" id="Yto-im-ILK"/>
+                            <constraint firstAttribute="trailing" secondItem="ObV-IW-myW" secondAttribute="trailing" id="qD0-19-RZj"/>
+                            <constraint firstItem="ITw-8a-z5E" firstAttribute="leading" secondItem="OPe-6i-U3L" secondAttribute="leading" id="vnT-4e-TrW"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="mYl-yM-0Fv"/>
