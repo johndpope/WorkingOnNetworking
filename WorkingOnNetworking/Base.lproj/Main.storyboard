@@ -96,7 +96,7 @@
         <!--Item-->
         <scene sceneID="nyY-Dj-P3i">
             <objects>
-                <viewController id="1uw-jQ-RHs" sceneMemberID="viewController">
+                <viewController id="1uw-jQ-RHs" customClass="TwitterViewController" customModule="WorkingOnNetworking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rbj-eg-kSA"/>
                         <viewControllerLayoutGuide type="bottom" id="ASg-OZ-1ec"/>
