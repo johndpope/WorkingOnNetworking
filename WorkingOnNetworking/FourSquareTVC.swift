@@ -9,13 +9,21 @@
 import UIKit
 import MapKit
 
-class FourSquareTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FourSquareTVC: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if let mapView = self.mapView
+        {
+            mapView.delegate = self
+        }
     }
 
     override func didReceiveMemoryWarning() {

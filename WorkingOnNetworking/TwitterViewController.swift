@@ -11,6 +11,8 @@ import CoreLocation
 
 class TwitterViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var twitterTableView: UITableView!
+    
     private var _shouldUpdateTrends = true
     private var _locationManager = CLLocationManager()
     var trends: [Trend] = []
@@ -71,7 +73,7 @@ class TwitterViewController: UIViewController, CLLocationManagerDelegate, UITabl
                     }
                     self.trends = trends
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        self.tableView.reloadData()
+                        self.twitterTableView.reloadData()
                     })
                 })
             }
