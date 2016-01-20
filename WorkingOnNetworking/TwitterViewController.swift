@@ -33,6 +33,7 @@ class TwitterViewController: UIViewController, CLLocationManagerDelegate, UITabl
         }
         else // location is not ready, so rely on locationManager:didUpdateLocations:
         {
+            _locationManager.requestWhenInUseAuthorization()
             _locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
             _locationManager.startUpdatingLocation()
             _locationManager.delegate = self
@@ -47,6 +48,7 @@ class TwitterViewController: UIViewController, CLLocationManagerDelegate, UITabl
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
+        print("locationManager")
         if _shouldUpdateTrends
         {
             _shouldUpdateTrends = false
