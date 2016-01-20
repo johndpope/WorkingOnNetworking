@@ -46,15 +46,20 @@ class FourSquareAPI {
             parameters += [Parameter.radius: "2000"]
             parameters += [Parameter.limit: "50"]
             
-            //// Start a "search", i.e. an async call to Foursquare that should return venue data
+            // Start a "search", i.e. an async call to Foursquare that should return venue data
+            //Call venues on session, and search on venues. The method search takes two (not one!) arguments: the parameters you created, and also the closure that’s below it. This way of writing is known as a trailing closure. The closure is the last parameter of the method, so instead of writing it within the method call parentheses, you can write it outside and wrap it inside squiggly brackets. The method search returns a reference to the lengthy task. It doesn’t start automatically, we start it later (near the end of the method).
             let searchTask = session.venues.search(parameters)
                 {
                 //Completion handler of the request
+                //The closure is executed when the search task completes! Check that the app will jump from the let searchTask … code line to the searchTask.start() line, and will jump to the if let response = … line when the data from the HTTP API is returned to the app.
+                //The closures signature (called closure expression syntax) is this: (result) -> Void in. It means that within the closure a parameter result is available, and that the closure returns nothing (Void).
                 (result) -> Void in
                     if let response = result.response {
                         //“Untangling” of the request result data, and the start of the Realm transaction.
+                        //response[“venues”] is not nil and if it can be cast (“converted”) to type [[String: AnyObject]].
                         if let venues = response["venues"] as? [[String: AnyObject]] {
                             autoreleasepool {
+                                //instantiate a Realm with line let realm = try! Realm()
                                 let realm = try! Realm()
                                 realm.beginWrite()
                                 
@@ -64,7 +69,6 @@ class FourSquareAPI {
                                     
                                     if let id = venue["id"] as? String {
                                         venueObject.id = id
-                                    
                                     }
                                     
                                     if let name = venue["name"] {
@@ -73,26 +77,22 @@ class FourSquareAPI {
                                     
                                     if let location = venue["location"] as? [String: AnyObject] {
                                     
-                                        if let longitude = location["lng"] as? Float
-                                        {
+                                        if let longitude = location["lng"] as? Float {
                                             venueObject.longitude = longitude
                                         }
                                         
-                                        if let latitude = location["lat"] as? Float
-                                        {
+                                        if let latitude = location["lat"] as? Float {
                                             venueObject.latitude = latitude
                                         }
-                                        
                                         if let formattedAddress = location["formattedAddress"] as? [String] {
-                                            
                                         }
                                         
                                     }
-                                 
+                                    //add the venueObject to Realm, and write it to the database
+                                    //"update" argument indicates that when this object already exists, Realm should overwrite it with the new data
                                     realm.add(venueObject, update: true)
-                                    
                                 }
-                                
+                                //
                                 do {
                                     try realm.commitWrite()
                                     print("Committing Write")

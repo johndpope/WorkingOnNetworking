@@ -19,6 +19,7 @@
 		2326DD591C4EE5980028F12B /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326DD581C4EE5980028F12B /* TwitterViewController.swift */; };
 		2787D1FF05F3652DB1BD9B04 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BD8FFD8A31B48A0AEE37BD /* Pods.framework */; };
 		C0044F9F1C4FEA6C000CD824 /* FourSquareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0044F9E1C4FEA6C000CD824 /* FourSquareAPI.swift */; };
+		C0044FA11C500CD0000CD824 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0044FA01C500CD0000CD824 /* Venue.swift */; };
 		C00F52221C4EE6D500AF0F92 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00F52211C4EE6D500AF0F92 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		2326DD581C4EE5980028F12B /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		6AF046FC63946B40E36001C1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C0044F9E1C4FEA6C000CD824 /* FourSquareAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourSquareAPI.swift; sourceTree = "<group>"; };
+		C0044FA01C500CD0000CD824 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		C00F52211C4EE6D500AF0F92 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E0BD8FFD8A31B48A0AEE37BD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 				2326DD251C4ECD840028F12B /* AppDelegate.swift */,
 				2326DD271C4ECD840028F12B /* FourSquareTVC.swift */,
 				C0044F9E1C4FEA6C000CD824 /* FourSquareAPI.swift */,
+				C0044FA01C500CD0000CD824 /* Venue.swift */,
 				2326DD291C4ECD840028F12B /* Main.storyboard */,
 				2326DD2C1C4ECD840028F12B /* Assets.xcassets */,
 				2326DD2E1C4ECD840028F12B /* LaunchScreen.storyboard */,
@@ -358,6 +361,7 @@
 				2326DD281C4ECD840028F12B /* FourSquareTVC.swift in Sources */,
 				2326DD261C4ECD840028F12B /* AppDelegate.swift in Sources */,
 				2326DD591C4EE5980028F12B /* TwitterViewController.swift in Sources */,
+				C0044FA11C500CD0000CD824 /* Venue.swift in Sources */,
 				2326DD541C4EE1000028F12B /* TwitterNetworkManager.swift in Sources */,
 				2326DD571C4EE29F0028F12B /* Trend.swift in Sources */,
 				C0044F9F1C4FEA6C000CD824 /* FourSquareAPI.swift in Sources */,
