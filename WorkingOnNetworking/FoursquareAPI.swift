@@ -33,8 +33,6 @@ class FourSquareAPI {
         
     }
     
-    
-    
     func getBreweriesWithLocation(location: CLLocation) {
         
         //Setup, configuration and start of the API request.
@@ -85,6 +83,7 @@ class FourSquareAPI {
                                             venueObject.latitude = latitude
                                         }
                                         if let formattedAddress = location["formattedAddress"] as? [String] {
+                                            venueObject.address = formattedAddress.joinWithSeparator(" ")
                                         }
                                         
                                     }
@@ -135,9 +134,5 @@ extension CLLocation {
         return parameters
         
     }
-    
-    
-    
-    
-    
+
 }
