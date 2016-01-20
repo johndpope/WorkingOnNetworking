@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9vg-20-lnU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9vg-20-lnU">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="28" width="611" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PSY-gh-hgl" id="Vuj-PH-YUJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="611" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="611" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -93,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="107" y="1015"/>
         </scene>
-        <!--Item-->
+        <!--Twitter-->
         <scene sceneID="nyY-Dj-P3i">
             <objects>
                 <viewController id="1uw-jQ-RHs" customClass="TwitterViewController" customModule="WorkingOnNetworking" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,7 +112,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="VZE-xm-Paj"/>
+                    <tabBarItem key="tabBarItem" title="Twitter" id="VZE-xm-Paj"/>
+                    <connections>
+                        <outlet property="tableView" destination="RCs-kR-3jt" id="Qfz-Zs-L9T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfH-Xr-NMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
