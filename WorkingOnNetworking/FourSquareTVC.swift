@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class FourSquareTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     

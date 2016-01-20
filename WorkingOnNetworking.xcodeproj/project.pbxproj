@@ -17,6 +17,7 @@
 		2326DD541C4EE1000028F12B /* TwitterNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326DD531C4EE1000028F12B /* TwitterNetworkManager.swift */; };
 		2326DD571C4EE29F0028F12B /* Trend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326DD561C4EE29F0028F12B /* Trend.swift */; };
 		2326DD591C4EE5980028F12B /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326DD581C4EE5980028F12B /* TwitterViewController.swift */; };
+		2326DD5B1C5004550028F12B /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2326DD5A1C5004550028F12B /* Keys.plist */; };
 		2787D1FF05F3652DB1BD9B04 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BD8FFD8A31B48A0AEE37BD /* Pods.framework */; };
 		C00F52221C4EE6D500AF0F92 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00F52211C4EE6D500AF0F92 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		2326DD531C4EE1000028F12B /* TwitterNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterNetworkManager.swift; sourceTree = "<group>"; };
 		2326DD561C4EE29F0028F12B /* Trend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trend.swift; sourceTree = "<group>"; };
 		2326DD581C4EE5980028F12B /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
+		2326DD5A1C5004550028F12B /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		6AF046FC63946B40E36001C1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C00F52211C4EE6D500AF0F92 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E0BD8FFD8A31B48A0AEE37BD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 				2326DD311C4ECD840028F12B /* Info.plist */,
 				2326DD551C4EE10E0028F12B /* Networking */,
 				2326DD581C4EE5980028F12B /* TwitterViewController.swift */,
+				2326DD5A1C5004550028F12B /* Keys.plist */,
 			);
 			path = WorkingOnNetworking;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2326DD5B1C5004550028F12B /* Keys.plist in Resources */,
 				2326DD301C4ECD840028F12B /* LaunchScreen.storyboard in Resources */,
 				2326DD2D1C4ECD840028F12B /* Assets.xcassets in Resources */,
 				2326DD2B1C4ECD840028F12B /* Main.storyboard in Resources */,

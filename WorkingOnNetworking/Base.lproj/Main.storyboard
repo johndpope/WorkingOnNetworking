@@ -36,22 +36,29 @@
                                     <outlet property="delegate" destination="vnL-5h-EiX" id="Xt1-9e-4uO"/>
                                 </connections>
                             </tableView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ITw-8a-z5E">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="260"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITw-8a-z5E">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="256"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ObV-IW-myW" firstAttribute="top" secondItem="ITw-8a-z5E" secondAttribute="bottom" constant="-4" id="26J-Pl-F7x"/>
+                            <constraint firstItem="ObV-IW-myW" firstAttribute="top" secondItem="ITw-8a-z5E" secondAttribute="bottom" id="26J-Pl-F7x"/>
                             <constraint firstItem="ObV-IW-myW" firstAttribute="trailing" secondItem="ITw-8a-z5E" secondAttribute="trailing" id="Urt-01-fFd"/>
                             <constraint firstItem="ITw-8a-z5E" firstAttribute="leading" secondItem="OPe-6i-U3L" secondAttribute="leading" id="WjM-TL-gTh"/>
                             <constraint firstAttribute="trailing" secondItem="ObV-IW-myW" secondAttribute="trailing" id="Z6J-u1-wPn"/>
                             <constraint firstItem="ObV-IW-myW" firstAttribute="bottom" secondItem="Fnv-ax-rxG" secondAttribute="top" id="ZY9-qT-8TU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ITw-8a-z5E" secondAttribute="trailing" constant="-20" id="d46-sQ-3Ro"/>
                             <constraint firstItem="ITw-8a-z5E" firstAttribute="top" secondItem="OPe-6i-U3L" secondAttribute="top" id="ffl-xt-rW0"/>
                             <constraint firstItem="ObV-IW-myW" firstAttribute="top" secondItem="DCr-pb-Oy2" secondAttribute="bottom" constant="236" id="ibi-x8-30W"/>
                             <constraint firstItem="ObV-IW-myW" firstAttribute="leading" secondItem="OPe-6i-U3L" secondAttribute="leadingMargin" constant="-31" id="lhi-e6-iaF"/>
                             <constraint firstItem="Fnv-ax-rxG" firstAttribute="top" secondItem="ITw-8a-z5E" secondAttribute="bottom" constant="291" id="vbB-nb-RE0"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Urt-01-fFd"/>
+                                <exclude reference="vbB-nb-RE0"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="mYl-yM-0Fv"/>
                     <connections>
@@ -108,6 +115,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RCs-kR-3jt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="twitterCell" id="duD-3s-hhH">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="duD-3s-hhH" id="RcJ-X9-4n6">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
