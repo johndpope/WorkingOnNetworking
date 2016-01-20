@@ -21,6 +21,8 @@ xcuserdata
 *.DS_Store
 
 *Keys.plist
+/Keys.plist
+/.plist
 
 
 
