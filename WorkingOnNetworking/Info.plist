@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>foursquareClientSecret</key>
+	<string>E4EG5TBFZDLGUSJDEOGMFRNAQCDU03W3JQDBD0T31G5HH35J</string>
+	<key>foursquareClientID</key>
+	<string>CFITOPDZUHBDVUIVCHOC5XUCVZ5OVHE40RIIUZA2AZXLSMUZ</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need to get your location!</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>

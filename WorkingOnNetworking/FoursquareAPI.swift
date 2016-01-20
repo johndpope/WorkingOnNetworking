@@ -11,6 +11,8 @@ import QuadratTouch
 import MapKit
 import RealmSwift
 
+var keys: NSDictionary?
+
 struct API {
     struct notifications {
         static let venuesUpdated = "venues updated"
@@ -18,18 +20,30 @@ struct API {
 }
 
 class FourSquareAPI {
+    
     //This “shared instance” is only accessible through the class CoffeeAPI, and is instantiated when the app starts (eager loading).
     static let sharedInstance = FourSquareAPI()
     //Declare a class property called session, of type Session? (from Das Quadrat).
     var session: Session?
     
     init() {
-        //initialize the Foursquare Client
-        let client = Client(clientID: "CFITOPDZUHBDVUIVCHOC5XUCVZ5OVHE40RIIUZA2AZXLSMUZ", clientSecret: "E4EG5TBFZDLGUSJDEOGMFRNAQCDU03W3JQDBD0T31G5HH35J", redirectURL: "")
-        let configuration = Configuration(client: client)
-        Session.setupSharedSessionWithConfiguration(configuration)
         
-        self.session = Session.sharedSession()
+        if let path = NSBundle.mainBundle().pathForResource("Info", ofType: "plist") {
+            keys = NSDictionary(contentsOfFile: path)
+        }
+        if let _ = keys {
+            let foursquareClientID = keys?["foursquareClientID"] as? String
+            let foursquareClientSecret = keys?["foursquareClientSecret"] as? String
+            
+            let client = Client(clientID: foursquareClientID!, clientSecret: foursquareClientSecret!, redirectURL: "")
+            let configuration = Configuration(client: client)
+            Session.setupSharedSessionWithConfiguration(configuration)
+            
+            self.session = Session.sharedSession()
+            
+        }
+        
+        //initialize the Foursquare Client
         
     }
     
@@ -134,5 +148,9 @@ extension CLLocation {
         return parameters
         
     }
-
+    
+    
+    
+    
+    
 }
