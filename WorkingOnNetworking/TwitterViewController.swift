@@ -13,6 +13,7 @@ class TwitterViewController: UIViewController, CLLocationManagerDelegate, UITabl
     
     private var _shouldUpdateTrends = true
     private var _locationManager = CLLocationManager()
+    
     var trends: [Trend] = []
 
     @IBOutlet weak var tableView: UITableView!
@@ -72,6 +73,7 @@ class TwitterViewController: UIViewController, CLLocationManagerDelegate, UITabl
                     }
                     self.trends = trends
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.reloadTrends()
                         self.tableView.reloadData()
                     })
                 })
@@ -81,10 +83,6 @@ class TwitterViewController: UIViewController, CLLocationManagerDelegate, UITabl
     
     func reloadTrends()   {
         trends.sortInPlace({$0.0.tweetVolume > $0.1.tweetVolume})
-        
-//        for i in 0..<trendLabels.count  {
-//            trendLabels[i].text = "\(trends[i].name)\n\(trends[i].tweetVolume)"
-//        }
     }
 
     /*
