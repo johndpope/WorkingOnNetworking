@@ -15,6 +15,7 @@ class TwitterViewController: UIViewController, CLLocationManagerDelegate, UITabl
     private var _locationManager = CLLocationManager()
     var trends: [Trend] = []
 
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
