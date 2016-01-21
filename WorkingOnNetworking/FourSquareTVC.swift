@@ -14,6 +14,8 @@ import RealmSwift
 class FourSquareTVC: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var foursquareTableView: UITableView!
+    
     
     var locationManager: CLLocationManager?
     let distanceSpan: Double = 500
@@ -44,7 +46,7 @@ class FourSquareTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             locationManager!.desiredAccuracy = kCLLocationAccuracyBestForNavigation
             //This method will cause a popup in the app asking for permission to use the GPS location data.
             locationManager!.requestAlwaysAuthorization()
-            locationManager!.distanceFilter = 50
+            locationManager!.distanceFilter = 400
             //This will cause the location manager to poll for a GPS location, and call a method on the delegate telling it the new GPS location.
             locationManager!.startUpdatingLocation()
             

@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Foursquare-->
         <scene sceneID="sbh-6X-edk">
             <objects>
                 <viewController id="vnL-5h-EiX" customClass="FourSquareTVC" customModule="WorkingOnNetworking" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,8 +60,9 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="mYl-yM-0Fv"/>
+                    <tabBarItem key="tabBarItem" title="Foursquare" id="mYl-yM-0Fv"/>
                     <connections>
+                        <outlet property="foursquareTableView" destination="ObV-IW-myW" id="xpu-ge-mdZ"/>
                         <outlet property="mapView" destination="ITw-8a-z5E" id="ayA-eM-cnU"/>
                     </connections>
                 </viewController>
