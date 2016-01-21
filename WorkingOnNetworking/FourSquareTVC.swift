@@ -93,6 +93,8 @@ class FourSquareTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                 
                 mapView?.addAnnotation(annotation)
             }
+            
+            foursquareTableView.reloadData()
         }
     }
     
@@ -128,7 +130,8 @@ class FourSquareTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        //?? is called a nil-coalescing operator. It basically says: when venues is nil, use 0 as a default value.
+        return venues?.count ?? 0
         
     }
     
@@ -136,8 +139,22 @@ class FourSquareTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         let cell = tableView.dequeueReusableCellWithIdentifier("FourSquareCell", forIndexPath: indexPath)
         
+        if let venue = venues?[indexPath.row] {
+            cell.textLabel?.text = venue.name
+            cell.detailTextLabel?.text = venue.address
+        
+        }
+        
         return cell
         
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let venue = venues?[indexPath.row] {
+            let region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: Double(venue.latitude), longitude: Double(venue.longitude)), distanceSpan, distanceSpan)
+            mapView.setRegion(region, animated: true)
+        
+        }
     }
 
 
